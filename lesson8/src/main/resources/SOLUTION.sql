@@ -1,13 +1,7 @@
-SELECT max(birthday) FROM student;
+SELECT MAX(birthday) FROM student;
 
-SELECT min(payment_date) FROM payment;
+SELECT MIN(payment_date) FROM payment;
 
-SELECT avg(m.mark) FROM mark AS m
-        JOIN subject AS s
-        ON m.subject_id = s.id
-        WHERE s.name = 'Math';
+SELECT AVG(mark) FROM mark AS m JOIN subject AS s on m.subject_id = s.id WHERE name = 'Math';
 
-SELECT min(p.amount) FROM payment AS p
-        JOIN paymenttype as t
-        ON p.type_id = t.id
-        WHERE t.name = 'WEEKLY';
+SELECT MIN(amount) FROM payment  AS p JOIN paymenttype AS pt ON p. type_id = pt.id WHERE name = 'WEEKLY';
